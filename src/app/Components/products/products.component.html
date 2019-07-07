@@ -1,0 +1,19 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Category Name</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of prod">
+      <!-- <th scope="row">1</th> -->
+      <td>{{p.name}}</td>
+      <td>{{p.price}}</td>
+      <td>{{p.code}}</td>
+    </tr>
+    
+  </tbody>
+</table>
