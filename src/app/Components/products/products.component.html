@@ -1,10 +1,16 @@
-<table class="table">
-  <thead class="thead-dark">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AddProduct">
+  Launch demo modal
+</button>
+<br>
+<table class="table table-bordered">
+  <thead class="thead-light">
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">Category Name</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <!-- <th scope="col">#</th> -->
+      <th scope="col">Product Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Code</th>
+      <th scope="col"><button class="btn btn-danger">Delete</button></th>
+
     </tr>
   </thead>
   <tbody>
@@ -13,6 +19,9 @@
       <td>{{p.name}}</td>
       <td>{{p.price}}</td>
       <td>{{p.code}}</td>
+      <td><input type="checkbox"/></td>
+
+
     </tr>
     
   </tbody>
