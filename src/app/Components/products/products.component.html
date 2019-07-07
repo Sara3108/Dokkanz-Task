@@ -2,7 +2,7 @@
   Add Product
 </button>
 <br>
-<table class="table table-bordered">
+<table class="table table-bordered" *ngIf="prod!=NULL">
   <thead class="thead-light">
     <tr>
       <!-- <th scope="col">#</th> -->
@@ -24,4 +24,7 @@
     
   </tbody>
 </table>
+<div *ngIf="prod==NULL" class="text-center p-5">
+  No Products in this Category
+</div>
 <add-product></add-product>

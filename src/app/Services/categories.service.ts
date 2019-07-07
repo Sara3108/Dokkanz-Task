@@ -29,15 +29,19 @@ export class CategoriesService {
     {id:3,name:"wardrobe",price:10,code:"FUW03"},
     {id:4,name:"Windsor chair",price:10,code:"FUCB04"}, 
   ]
+  private booksCategory: Category[]= [
+    {id:6,name:"facts",product:this.BooksProd},
+    {id:7,name:"ddd"},
+  ]
 
   private category: Category[]= [
     {id:1,name:"Beauty"},
-    {id:2,name:"Books",product:this.BooksProd},
-    {id:3,name:"Furniture",product:this.FurnitureProd},
+    {id:2,name:"Books",category:this.booksCategory},
+    {id:3,name:"Furniture", product:this.FurnitureProd},
     {id:4,name:"Toys"},
-    {id:5,name:"Foods",product:this.FoodProd},
+    {id:5,name:"Foods", product:this.FoodProd},
     {id:6,name:"Jewelry & Accessories"},
-    {id:7,name:"Clothes",product:this.ClothesProd},
+    {id:7,name:"Clothes" , product:this.ClothesProd},
   ]
   constructor() { }
   getAllCategories(){
@@ -51,5 +55,8 @@ export class CategoriesService {
   }
   getProductsOfCategory(categoryId){
     return this.category.find(c=>c.id==categoryId).product;
+  }
+  getSubCategories(categoryId){
+    return this.category.find(c=>c.id==categoryId).category;
   }
 }
