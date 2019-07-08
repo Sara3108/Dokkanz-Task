@@ -35,12 +35,12 @@
     </div>
 
     <div class="card-body">
-      <ul class="borderless list-group-flush list-group" *ngIf="category.category!=NULL">
-        <li *ngFor="let c of category.category" class="borderless list-group-item" [routerLink]="['/product',c.id]">{{c.name}}
+      <ul class="borderless list-group-flush list-group" *ngIf="subCategories!=NULL">
+        <li *ngFor="let c of subCategories" class="borderless list-group-item" [routerLink]="['/product',c.id]">{{c.name}}
 
         </li>
       </ul>
-      <P *ngIf="category.category==NULL" class="text-center">No Sub Categories to Disblay</P>
+      <P *ngIf="subCategories==NULL" class="text-center">No Sub Categories to Disblay</P>
 
       <!-- </div> -->
     </div>
