@@ -10,7 +10,6 @@ import { RouterModule } from '@angular/router';
 import { DefaultComponent } from './Components/default/default.component';
 import { AddProductComponent } from './Components/add-product/add-product.component';
 import {ReactiveFormsModule} from '@angular/forms';
-import { SubCategoriesComponent } from './Components/sub-categories/sub-categories.component'
 
 @NgModule({
   declarations: [
@@ -20,7 +19,6 @@ import { SubCategoriesComponent } from './Components/sub-categories/sub-categori
     ProductsComponent,
     DefaultComponent,
     AddProductComponent,
-    SubCategoriesComponent
   ],
   imports: [
     BrowserModule,
