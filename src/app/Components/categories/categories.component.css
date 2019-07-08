@@ -1,0 +1,20 @@
+
+
+@media only screen and (min-width: 850px) {
+    .c{
+        padding-left: 14%;
+    }
+  }
+
+  .header{
+
+    background-color: darkcyan;
+    color: white;
+    /* text-align: center; */
+    font-weight: bold;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  li:hover{
+    cursor: pointer;
+  }

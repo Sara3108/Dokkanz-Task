@@ -9,6 +9,8 @@ import { ProductsComponent } from './Components/products/products.component';
 import { RouterModule } from '@angular/router';
 import { DefaultComponent } from './Components/default/default.component';
 import { AddProductComponent } from './Components/add-product/add-product.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import { SubCategoriesComponent } from './Components/sub-categories/sub-categories.component'
 
 @NgModule({
   declarations: [
@@ -17,13 +19,15 @@ import { AddProductComponent } from './Components/add-product/add-product.compon
     CategoriesComponent,
     ProductsComponent,
     DefaultComponent,
-    AddProductComponent
+    AddProductComponent,
+    SubCategoriesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
-      {path:'', component:DefaultComponent},
+      {path:'', component:CategoriesComponent},
       {path:'product/:id', component:ProductsComponent}
 
     ])

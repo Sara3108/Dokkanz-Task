@@ -1,4 +1,4 @@
-<button type="button" class="list-group-item list-group-item-action active" >
+<!-- <button type="button" class="list-group-item list-group-item-action active" >
   All Categories
   <i class="fas fa-plus"></i>
 </button>
@@ -6,6 +6,47 @@
 <ul class="list-group" *ngFor="let category of categories">
   <li class="list-group-item d-flex justify-content-between align-items-center" [routerLink]="['/product',category.id]">
    {{category.name}}
-    <!-- <span class="badge badge-primary badge-pill">14</span> -->
+    <span class="badge badge-primary badge-pill">14</span>
   </li>
-</ul>
+</ul> -->
+
+<h1 class="text-center">All Categories
+  <!-- <button type="button" class="btn btn-secondary">+</button> -->
+  <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#AddRootCategory">
+    +
+  </button>
+
+</h1>
+<div class="row m-auto px-20 c">
+  <!-- <div class=" row m-auto"> -->
+  <div class="card col-md-3 m-3" *ngFor="let category of categories" style="padding-right:0;padding-left: 0">
+    <!-- <div class="card-header header">
+      {{category.name}}
+      <a>+</a>
+
+    </div> -->
+    <div class="card-header row header" style="max-width: 100%">
+      <div class="col-md-9 order-md-1">
+        {{category.name}}
+      </div>
+      <div class="col-md-3 order-md-2 text-center">
+        <a>+</a>
+      </div>
+    </div>
+
+    <div class="card-body">
+      <ul class="borderless list-group-flush list-group" *ngIf="category.category!=NULL">
+        <li *ngFor="let c of category.category" class="borderless list-group-item" [routerLink]="['/product',c.id]">{{c.name}}
+
+        </li>
+      </ul>
+      <P *ngIf="category.category==NULL" class="text-center">No Sub Categories to Disblay</P>
+
+      <!-- </div> -->
+    </div>
+
+  </div>
+
+
+
+</div>
